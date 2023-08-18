@@ -112,10 +112,12 @@ We would like you to complete the following tasks:
 ## Submission Guidance
 
 ### Shoulds
-- Only use plain Terraform in your solution
+- Use only plain Terraform in your solution, i.e. anything supported by the Terraform CLI installed by the `run.sh` script, but not external tooling or libraries that wrap or extend Terraform, such as Terragrunt or tfenv
 - Only modify files in the `tf/` directory, `run.sh`, and `docker-compose.yml`
 - Keep the current versions of the services running in `development` and `production` environments
 - Structure your code in a way that will segregate environments
 - 🚨 All environments (including staging) should be created when you run `vagrant up` and the apps should print `service started` and the secret data in their logs 🚨
 - Structure your code in a way that allows engineers to run different versions of services in different environments
 
+### Should Nots
+- Do not use external tools that extend Terraform, such as Terragrunt.
